@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Diabos Store - Contacto e Suporte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo-badge">LD</div>
+            <div class="logo-text">LOS DIABOS <span>STORE</span></div>
+        </div>
+        <nav aria-label="Navegação Principal">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Central de Atendimento e Canais de Contacto</h1>
+
+        <!-- Formulário de Envio Direto via WhatsApp (Com Assunto Livre e Validação Sequencial) -->
+        <section class="form-card" style="margin-top: 1.5rem; margin-bottom: 2.5rem;">
+            <h2>Envie a sua Mensagem Direta para o WhatsApp</h2>
+            <p style="color: var(--color-primary); font-weight: bold; margin-bottom: 1.5rem;">
+                * Preencha os campos sequencialmente (1º ao 4º). Ao clicar no botão, a sua mensagem estruturada abrirá instantaneamente no nosso WhatsApp (+258 83 371 7087).
+            </p>
+
+            <form id="whatsappContactForm" onsubmit="validarEEnviarWhatsapp(event)">
+                <div class="form-group">
+                    <label for="nome">1. Nome Completo *</label>
+                    <input type="text" id="nome" required placeholder="Digite o seu nome completo">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">2. Seu Número de Telefone / WhatsApp *</label>
+                    <input type="tel" id="telefone" required placeholder="+258 8x xxx xxxx" onfocus="validarOrdem(1)">
+                </div>
+
+                <div class="form-group">
+                    <label for="assunto">3. Assunto da Mensagem *</label>
+                    <input type="text" id="assunto" required placeholder="Escreva aqui o assunto livremente (ex: Encomenda iPhone 16)" onfocus="validarOrdem(2)">
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">4. Sua Mensagem detalhada *</label>
+                    <textarea id="mensagem" rows="6" required placeholder="Escreva aqui detalhadamente a sua dúvida, modelo pretendido ou solicitação..." onfocus="validarOrdem(3)"></textarea>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%; font-size: 1.1rem; padding: 14px;">
+                    💬 Enviar Mensagem para o WhatsApp (+258 83 371 7087)
+                </button>
+            </form>
+        </section>
+
+        <!-- Secção de Informações Oficiais e Horários (Títulos em Branco) -->
+        <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 3rem;">
+            <div class="hero-card" style="margin-bottom: 0;">
+                <h3 style="color: #ffffff !important; border-bottom: 2px solid var(--color-primary); padding-bottom: 6px; display: inline-block; margin-bottom: 1rem;">📍 Localização e Morada</h3>
+                <p style="margin-top: 0.8rem;"><strong>Sede Principal:</strong> Av. Eduardo Mondlane, Nº 1234, Maputo - Moçambique</p>
+                <p style="margin-top: 0.5rem;"><strong>Ponto de Referência:</strong> Próximo ao centro comercial da capital.</p>
+                <p style="margin-top: 0.5rem;"><strong>País:</strong> Moçambique</p>
+            </div>
+
+            <div class="hero-card" style="margin-bottom: 0;">
+                <h3 style="color: #ffffff !important; border-bottom: 2px solid var(--color-primary); padding-bottom: 6px; display: inline-block; margin-bottom: 1rem;">🕒 Horários de Funcionamento</h3>
+                <p style="margin-top: 0.8rem;"><strong>Segunda a Sexta-feira:</strong> 08:00h às 18:00h</p>
+                <p style="margin-top: 0.5rem;"><strong>Sábados:</strong> 09:00h às 13:00h</p>
+                <p style="margin-top: 0.5rem;"><strong>Domingos e Feriados:</strong> Atendimento digital restrito via WhatsApp</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Los Diabos Store. Todos os direitos reservados. Desenvolvido por Kiran Omar Gulamo.</p>
+    </footer>
+
+    <!-- Script de Validação Sequencial e Redirecionamento WhatsApp -->
+    <script>
+        const sequenciaCampos = [
+            { id: 'nome', label: '1. Nome Completo' },
+            { id: 'telefone', label: '2. Seu Número de Telefone / WhatsApp' },
+            { id: 'assunto', label: '3. Assunto da Mensagem' },
+            { id: 'mensagem', label: '4. Sua Mensagem' }
+        ];
+
+        function validarOrdem(indiceCampoAtual) {
+            for (let i = 0; i < indiceCampoAtual; i++) {
+                const valorAnterior = document.getElementById(sequenciaCampos[i].id).value.trim();
+                if (valorAnterior === "") {
+                    alert(`ERRO DE SEQUÊNCIA: Deve preencher obrigatoriamente o campo "${sequenciaCampos[i].label}" antes de avançar!`);
+                    document.getElementById(sequenciaCampos[i].id).focus();
+                    break;
+                }
+            }
+        }
+
+        function validarEEnviarWhatsapp(event) {
+            event.preventDefault();
+
+            for (let i = 0; i < sequenciaCampos.length; i++) {
+                const campo = document.getElementById(sequenciaCampos[i].id);
+                if (campo.value.trim() === "") {
+                    alert(`ERRO: O campo "${sequenciaCampos[i].label}" não foi preenchido. Siga a ordem sequencial!`);
+                    campo.focus();
+                    return false;
+                }
+            }
+
+            const nome = document.getElementById('nome').value.trim();
+            const telefone = document.getElementById('telefone').value.trim();
+            const assunto = document.getElementById('assunto').value.trim();
+            const mensagem = document.getElementById('mensagem').value.trim();
+
+            const textoWhatsapp = 
+                "*MENSAGEM DE CONTACTO - LOS DIABOS STORE*\n\n" +
+                "*1. Nome do Cliente:* " + nome + "\n" +
+                "*2. Telefone/WhatsApp:* " + telefone + "\n" +
+                "*3. Assunto:* " + assunto + "\n\n" +
+                "*4. Mensagem:*\n" + mensagem;
+
+            const numeroDestino = "258833717087";
+            const urlWhatsapp = `https://wa.me/${numeroDestino}?text=${encodeURIComponent(textoWhatsapp)}`;
+
+            window.open(urlWhatsapp, '_blank');
+            document.getElementById('whatsappContactForm').reset();
+        }
+    </script>
+</body>
+</html>

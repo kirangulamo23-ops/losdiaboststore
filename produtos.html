@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Diabos Store - Produtos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo-badge">LD</div>
+            <div class="logo-text">LOS DIABOS <span>STORE</span></div>
+        </div>
+        <nav aria-label="Navegação Principal">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="produtos.html" class="active">Produtos</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 style="text-align: center; margin-bottom: 1rem;">Catálogo Oficial - Top 5 Marcas Mundiais</h1>
+        <p style="text-align: center; color: var(--color-text-muted); margin-bottom: 3rem;">
+            Explore os melhores smartphones do planeta. Escolha o seu modelo e finalize a compra diretamente via WhatsApp.
+        </p>
+
+        <!-- ================= MARCA 1: APPLE (9 ITENS) ================= -->
+        <section style="margin-bottom: 4rem;">
+            <h2>1. Apple (iPhone)</h2>
+            <div class="grid-products">
+                <!-- 1 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('iphone 18 Pro Max.jpg')
+                    ; background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>iPhone 18 Pro Max</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Titanium, A18 Pro</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">135.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('iPhone 18 Pro Max', 89900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 2 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('trabalho 3 html/iPhone 18 Pro.jpg');
+                     background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>iPhone 18 Pro</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Compacto Pro, A18 Pro</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">79.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('iPhone 16 Pro', 79900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 3 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('trabalho 3 html/iPhone18.jpg');
+                     background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>iPhone 18</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Tela Grande, A18</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">69.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('iPhone 16 Plus', 69900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 4 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('trabalho 3 html/iPhone Duo.jpg');
+                     background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>iPhone Dou</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Standard Edition</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">61.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('iPhone 16', 61900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 5 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('trabalho 3 html/iPhone Air.jpg');
+                     background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>iPhone 18 Air</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Titânio Natural</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">75.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('iPhone 15 Pro Max', 75900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 6 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('trabalho 3 html/iPhone 17 Pro Max.jpg');
+                     background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>iPhone 17 Pro Max</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">A17 Pro Chip</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">68.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('iPhone 15 Pro', 68900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 7 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('trabalho 3 html/iPhone 17 Pro.jpg');
+                     background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>iPhone 17 Pro</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Dynamic Island</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">54.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('iPhone 15', 54900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 8 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('trabalho 3 html/iPhone 17.jpg');
+                     background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>iPhone 17</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Always-On Display</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">64.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('iPhone 14 Pro Max', 64900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                
+            </div>
+        </section>
+
+        <!-- ================= MARCA 2: SAMSUNG (9 ITENS) ================= -->
+        <section style="margin-bottom: 4rem;">
+            <h2>2. Samsung (Galaxy)</h2>
+            <div class="grid-products">
+                <!-- 1 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Galaxy S26 Ultra</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Galaxy AI, 200MP</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">82.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Galaxy S24 Ultra', 82900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 2 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Galaxy S26+</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Tela Dinâmica AMOLED</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">65.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Galaxy S24 Plus', 65900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 3 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Galaxy S26</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Compacto Poderoso</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">55.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Galaxy S24', 55900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 4 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Galaxy Z Fold 8</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Smartphone Dobrável</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">115.000,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Galaxy Z Fold 6', 115000)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 5 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Galaxy Z Flip 8</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Design Compacto Flip</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">72.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Galaxy Z Flip 6', 72900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 6 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Galaxy S25 Ultra</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Clássico 200MP</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">65.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Galaxy S23 Ultra', 65900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 7 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Galaxy A57 5G</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Intermediário Premium</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">28.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Galaxy A55 5G', 28900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 8 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Galaxy A37 5G</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Desempenho Confiável</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">22.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Galaxy A35 5G', 22900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                
+            </div>
+        </section>
+
+        <!-- ================= MARCA 3: XIAOMI (9 ITENS) ================= -->
+        <section style="margin-bottom: 4rem;">
+            <h2>3. Xiaomi</h2>
+            <div class="grid-products">
+                <!-- 1 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Xiaomi 14 Ultra</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Lentes Leica Quad</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">68.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Xiaomi 14 Ultra', 68900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 2 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Xiaomi 14 Pro</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Snapdragon 8 Gen 3</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">58.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Xiaomi 14 Pro', 58900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 3 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Xiaomi 14</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Compacto com Leica</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">49.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Xiaomi 14', 49900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 4 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Redmi Note 13 Pro+</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Câmera 200MP IP68</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">26.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Redmi Note 13 Pro Plus', 26900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 5 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Redmi Note 13 Pro</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">AMOLED 120Hz</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">21.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Redmi Note 13 Pro', 21900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 6 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Poco F6 Pro</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Performance Extrema</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">38.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Poco F6 Pro', 38900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 7 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Poco X6 Pro</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Dimensity 8300 Ultra</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">24.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Poco X6 Pro', 24900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 8 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Xiaomi 13T Pro</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Carregamento 120W</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">46.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Xiaomi 13T Pro', 46900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+            
+            </div>
+        </section>
+
+        <!-- ================= MARCA 4: GOOGLE PIXEL (9 ITENS) ================= -->
+        <section style="margin-bottom: 4rem;">
+            <h2>4. Google Pixel</h2>
+            <div class="grid-products">
+                <!-- 1 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Google Pixel 9 Pro XL</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Tensor G4, Gemini AI</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">71.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Google Pixel 9 Pro XL', 71900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 2 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Google Pixel 9 Pro</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Fotografia Computacional</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">64.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Google Pixel 9 Pro', 64900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 3 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Google Pixel 9</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Design Renovado</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">52.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Google Pixel 9', 52900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 4 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Google Pixel 8 Pro</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Sensor de Temperatura</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">58.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Google Pixel 8 Pro', 58900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 5 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Google Pixel 8</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">7 Anos de Atualizações</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">46.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Google Pixel 8', 46900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 6 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Google Pixel 8a</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">A-Series Inteligente</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">37.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Google Pixel 8a', 37900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 7 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Google Pixel 7 Pro</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Zoom Óptico 5x</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">48.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Google Pixel 7 Pro', 48900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 8 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Google Pixel 7</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Tensor G2 Eficiente</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">38.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Google Pixel 7', 38900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                
+            </div>
+        </section>
+
+        <!-- ================= MARCA 5: HUAWEI (9 ITENS) ================= -->
+        <section style="margin-bottom: 4rem;">
+            <h2>5. Huawei</h2>
+            <div class="grid-products">
+                <!-- 1 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Huawei Pura 70 Ultra</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Câmera Retrátil XMAGE</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">75.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Huawei Pura 70 Ultra', 75900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 2 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Huawei Pura 70 Pro</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Super Sensing Zoom</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">65.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Huawei Pura 70 Pro', 65900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 3 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Huawei Mate 60 Pro</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Conectividade Satelital</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">69.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Huawei Mate 60 Pro', 69900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 4 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Huawei Mate X3</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Dobrável Ultracompacto</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">110.000,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Huawei Mate X3', 110000)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 5 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Huawei Nova 12 Pro</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Câmera Frontal Dupla</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">32.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Huawei Nova 12 Pro', 32900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 6 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Huawei Nova 12 SE</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Elegância e Economia</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">22.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Huawei Nova 12 SE', 22900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 7 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Huawei P60 Pro</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Abertura Física Ajustável</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">54.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Huawei P60 Pro', 54900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+                <!-- 8 -->
+                <article class="card-product">
+                    <div style="width:100%; height:200px; background-image:url('https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3>Huawei Mate 50 Pro</h3><p style="color:var(--color-text-muted); font-size:0.95rem;">Vidro Kunlun Armor</p></div>
+                    <p style="font-size:1.3rem; font-weight:bold; color:var(--color-primary); margin:0.5rem 0;">48.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Huawei Mate 50 Pro', 48900)" class="btn">Adicionar ao Carrinho</button>
+                </article>
+               
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Los Diabos Store. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function adicionarAoCarrinho(nome, preco) {
+            let itens = localStorage.getItem('carrinhoItens');
+            itens = itens ? JSON.parse(itens) : [];
+            const index = itens.findIndex(i => i.nome === nome);
+            if (index !== -1) {
+                itens[index].quantidade += 1;
+            } else {
+                itens.push({ nome: nome, preco: preco, quantidade: 1 });
+            }
+            localStorage.setItem('carrinhoItens', JSON.stringify(itens));
+            alert(`${nome} foi adicionado ao carrinho com sucesso!`);
+            window.location.href = "carrinho.html";
+        }
+    </script>
+</body>
+</html>

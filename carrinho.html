@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Diabos Store - Carrinho de Compras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo-badge">LD</div>
+            <div class="logo-text">LOS DIABOS <span>STORE</span></div>
+        </div>
+        <nav aria-label="Navegação Principal">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="carrinho.html" class="active">Carrinho</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Seu Carrinho de Compras</h1>
+
+        <!-- Tabela do Carrinho (Texto Preto nos itens adicionados) -->
+        <div class="hero-card" style="margin-bottom: 2.5rem;">
+            <div style="overflow-x:auto; border-radius:8px; border:1px solid var(--color-border); margin-bottom:1.5rem; background:#ffffff;">
+                <table style="width:100%; border-collapse:collapse; min-width:500px; color: #000000 !important;">
+                    <thead>
+                        <tr style="background:var(--color-header); color:#ffffff;">
+                            <th style="padding:12px; text-align:left;">Produto</th>
+                            <th style="padding:12px; text-align:left;">Quantidade</th>
+                            <th style="padding:12px; text-align:left;">Preço Unitário</th>
+                            <th style="padding:12px; text-align:left;">Subtotal</th>
+                            <th style="padding:12px; text-align:left;">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartBody" style="color: #000000 !important;">
+                        <!-- Itens injetados via JavaScript com texto preto -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;">
+                <h3 style="margin:0; color: #ffffff;">Total a Pagar: <span id="cartTotal" style="color:var(--color-primary); font-size:1.5rem;">0,00 MT</span></h3>
+                <div style="display:flex; gap:15px; flex-wrap:wrap;">
+                    <button class="btn btn-secondary" style="width:auto;" onclick="limparCarrinho()">🗑️ Limpar Carrinho</button>
+                    <button class="btn" style="width:auto;" onclick="enviarPedidoWhatsapp()">✅ Finalizar no WhatsApp (+258 83 371 7087)</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Secção de Recomendações (8 Smartphones com Fotos e Preços) -->
+        <section class="hero-card">
+            <h2>⭐ Sugestões e Recomendações Especiais para Si</h2>
+            <p style="color: var(--color-text-muted); margin-bottom: 1.5rem;">
+                Aproveite para adicionar estes best-sellers ao seu pedido atual.
+            </p>
+
+            <div class="grid-products">
+                <!-- Recomendação 1 -->
+                <article class="card-product">
+                    <div style="width:100%; height:180px; background-image:url('https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3 style="color: #0f172a;">iPhone 16 Pro</h3><p style="color:var(--color-text-muted); font-size:0.9rem;">Recomendado Pro</p></div>
+                    <p style="font-size:1.2rem; font-weight:bold; color:var(--color-primary); margin:0.4rem 0;">79.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('iPhone 16 Pro', 79900)" class="btn">Adicionar</button>
+                </article>
+
+                <!-- Recomendação 2 -->
+                <article class="card-product">
+                    <div style="width:100%; height:180px; background-image:url('https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3 style="color: #0f172a;">Galaxy S24 Ultra</h3><p style="color:var(--color-text-muted); font-size:0.9rem;">Top de Vendas Samsung</p></div>
+                    <p style="font-size:1.2rem; font-weight:bold; color:var(--color-primary); margin:0.4rem 0;">82.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Galaxy S24 Ultra', 82900)" class="btn">Adicionar</button>
+                </article>
+
+                <!-- Recomendação 3 -->
+                <article class="card-product">
+                    <div style="width:100%; height:180px; background-image:url('https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3 style="color: #0f172a;">Xiaomi 14 Ultra</h3><p style="color:var(--color-text-muted); font-size:0.9rem;">Lentes Leica</p></div>
+                    <p style="font-size:1.2rem; font-weight:bold; color:var(--color-primary); margin:0.4rem 0;">68.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Xiaomi 14 Ultra', 68900)" class="btn">Adicionar</button>
+                </article>
+
+                <!-- Recomendação 4 -->
+                <article class="card-product">
+                    <div style="width:100%; height:180px; background-image:url('https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3 style="color: #0f172a;">Google Pixel 9 Pro</h3><p style="color:var(--color-text-muted); font-size:0.9rem;">Google Gemini AI</p></div>
+                    <p style="font-size:1.2rem; font-weight:bold; color:var(--color-primary); margin:0.4rem 0;">61.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Google Pixel 9 Pro', 61900)" class="btn">Adicionar</button>
+                </article>
+
+                <!-- Recomendação 5 -->
+                <article class="card-product">
+                    <div style="width:100%; height:180px; background-image:url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3 style="color: #0f172a;">Huawei Pura 70 Ultra</h3><p style="color:var(--color-text-muted); font-size:0.9rem;">Câmera Retrátil</p></div>
+                    <p style="font-size:1.2rem; font-weight:bold; color:var(--color-primary); margin:0.4rem 0;">75.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Huawei Pura 70 Ultra', 75900)" class="btn">Adicionar</button>
+                </article>
+
+                <!-- Recomendação 6 -->
+                <article class="card-product">
+                    <div style="width:100%; height:180px; background-image:url('https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3 style="color: #0f172a;">OnePlus 12</h3><p style="color:var(--color-text-muted); font-size:0.9rem;">Snapdragon 8 Gen 3</p></div>
+                    <p style="font-size:1.2rem; font-weight:bold; color:var(--color-primary); margin:0.4rem 0;">55.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('OnePlus 12', 55900)" class="btn">Adicionar</button>
+                </article>
+
+                <!-- Recomendação 7 -->
+                <article class="card-product">
+                    <div style="width:100%; height:180px; background-image:url('https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3 style="color: #0f172a;">Galaxy Z Fold 6</h3><p style="color:var(--color-text-muted); font-size:0.9rem;">Dobrável Premium</p></div>
+                    <p style="font-size:1.2rem; font-weight:bold; color:var(--color-primary); margin:0.4rem 0;">115.000,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Galaxy Z Fold 6', 115000)" class="btn">Adicionar</button>
+                </article>
+
+                <!-- Recomendação 8 -->
+                <article class="card-product">
+                    <div style="width:100%; height:180px; background-image:url('https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=600&auto=format&fit=crop'); background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:1rem;"></div>
+                    <div><h3 style="color: #0f172a;">Redmi Note 13 Pro+</h3><p style="color:var(--color-text-muted); font-size:0.9rem;">Melhor Custo-Benefício</p></div>
+                    <p style="font-size:1.2rem; font-weight:bold; color:var(--color-primary); margin:0.4rem 0;">26.900,00 MT</p>
+                    <button onclick="adicionarAoCarrinho('Redmi Note 13 Pro Plus', 26900)" class="btn">Adicionar</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Los Diabos Store. Todos os direitos reservados. Desenvolvido por Kiran Omar Gulamo.</p>
+    </footer>
+
+    <script>
+        function formatarMT(v) { 
+            return v.toLocaleString('pt-MZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " MT"; 
+        }
+
+        function obterCarrinho() { 
+            const i = localStorage.getItem('carrinhoItens'); 
+            return i ? JSON.parse(i) : []; 
+        }
+
+        function salvarCarrinho(i) { 
+            localStorage.setItem('carrinhoItens', JSON.stringify(i)); 
+        }
+
+        function renderizarCarrinho() {
+            const itens = obterCarrinho();
+            const body = document.getElementById('cartBody');
+            let total = 0;
+
+            if (itens.length === 0) {
+                body.innerHTML = `<tr><td colspan="5" style="text-align:center; padding:2rem; color:#000000;">O seu carrinho está vazio.</td></tr>`;
+                document.getElementById('cartTotal').innerText = "0,00 MT";
+                return;
+            }
+
+            let html = '';
+            itens.forEach((item, idx) => {
+                const sub = item.preco * item.quantidade;
+                total += sub;
+                html += `
+                    <tr>
+                        <td style="padding:12px; border-bottom:1px solid var(--color-border); color: #000000 !important;"><strong>${item.nome}</strong></td>
+                        <td style="padding:12px; border-bottom:1px solid var(--color-border); color: #000000 !important;">
+                            <button onclick="altQtd(${idx}, -1)" style="background:var(--color-header); color:white; border:none; padding:4px 8px; border-radius:4px; cursor:pointer;">-</button>
+                            <span style="margin: 0 8px; color: #000000 !important; font-weight: bold;">${item.quantidade}</span>
+                            <button onclick="altQtd(${idx}, 1)" style="background:var(--color-header); color:white; border:none; padding:4px 8px; border-radius:4px; cursor:pointer;">+</button>
+                        </td>
+                        <td style="padding:12px; border-bottom:1px solid var(--color-border); color: #000000 !important;">${formatarMT(item.preco)}</td>
+                        <td style="padding:12px; border-bottom:1px solid var(--color-border); color: #000000 !important;"><strong>${formatarMT(sub)}</strong></td>
+                        <td style="padding:12px; border-bottom:1px solid var(--color-border);">
+                            <button onclick="rem(${idx})" style="background:#dc2626; color:#fff; border:none; padding:4px 8px; border-radius:4px; cursor:pointer;">Remover</button>
+                        </td>
+                    </tr>`;
+            });
+
+            body.innerHTML = html;
+            document.getElementById('cartTotal').innerText = formatarMT(total);
+        }
+
+        function altQtd(idx, delta) {
+            let itens = obterCarrinho();
+            itens[idx].quantidade += delta;
+            if (itens[idx].quantidade <= 0) itens.splice(idx, 1);
+            salvarCarrinho(itens); 
+            renderizarCarrinho();
+        }
+
+        function rem(idx) { 
+            let itens = obterCarrinho(); 
+            itens.splice(idx, 1); 
+            salvarCarrinho(itens); 
+            renderizarCarrinho(); 
+        }
+
+        function limparCarrinho() { 
+            localStorage.removeItem('carrinhoItens'); 
+            renderizarCarrinho(); 
+            alert('O carrinho foi limpo com sucesso!'); 
+        }
+
+        function adicionarAoCarrinho(nome, preco) {
+            let itens = obterCarrinho();
+            const index = itens.findIndex(i => i.nome === nome);
+            if (index !== -1) {
+                itens[index].quantidade += 1;
+            } else {
+                itens.push({ nome: nome, preco: preco, quantidade: 1 });
+            }
+            salvarCarrinho(itens);
+            renderizarCarrinho();
+            alert(`${nome} foi adicionado ao carrinho!`);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function enviarPedidoWhatsapp() {
+            const itens = obterCarrinho();
+            if (itens.length === 0) { 
+                alert('O seu carrinho está vazio!'); 
+                return; 
+            }
+
+            let texto = "Olá! Gostaria de finalizar o seguinte pedido na *Los Diabos Store*:\n\n";
+            let total = 0;
+
+            itens.forEach((i, idx) => {
+                const sub = i.preco * i.quantidade;
+                total += sub;
+                texto += `*${idx + 1}. ${i.nome}*\n- Qtd: ${i.quantidade}\n- Subtotal: ${formatarMT(sub)}\n\n`;
+            });
+
+            texto += `*TOTAL GERAL DO PEDIDO:* ${formatarMT(total)}\n\nPor favor, confirmem os dados para pagamento e entrega em Maputo.`;
+
+            const numeroWhatsapp = "258833717087";
+            window.open(`https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(texto)}`, '_blank');
+        }
+
+        window.onload = renderizarCarrinho;
+    </script>
+</body>
+</html>
